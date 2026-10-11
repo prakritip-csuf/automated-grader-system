@@ -1,5 +1,5 @@
 [project]
-name = "automated-grader-system"
+name = "automated_answer_grader"
 version = "0.1.0"
 description = "Automated Answer Grader: an OCR and NLP-based system for short-answer evaluation."
 readme = "README.md"
@@ -9,9 +9,13 @@ authors = [
 requires-python = ">=3.13, <3.14"
 dependencies = [
     "fastapi[standard]>=0.141.1",
+    "opencv-python-headless>=5.0.0.93",
+    "pillow>=12.3.0",
+    "python-multipart>=0.0.32",
+    "sentencepiece>=0.2.2",
+    "torch>=2.14.1",
+    "transformers>=5.19.0",
 ]
-
-automated-grader-system = "automated_grader_system:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]

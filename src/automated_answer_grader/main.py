@@ -1,5 +1,3 @@
-"""FastAPI application entry point."""
-
 from fastapi import FastAPI
 
 from automated_answer_grader.api.router import api_router
@@ -16,10 +14,7 @@ def create_app() -> FastAPI:
     application = FastAPI(
         title=APP_NAME,
         version=APP_VERSION,
-        description=(
-            "API for an OCR and NLP-based automated short-answer "
-            "grading system."
-        ),
+        description=("API for an OCR and NLP-based automated short-answer grading system."),
     )
 
     application.include_router(
