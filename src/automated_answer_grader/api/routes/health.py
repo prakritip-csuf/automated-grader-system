@@ -5,7 +5,7 @@ from typing import Literal
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from automated_grader_system.core.config import APP_SLUG, APP_VERSION
+from automated_answer_grader.core.config import APP_SLUG, APP_VERSION
 
 
 class HealthResponse(BaseModel):

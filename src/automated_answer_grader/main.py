@@ -2,8 +2,8 @@
 
 from fastapi import FastAPI
 
-from automated_grader_system.api.router import api_router
-from automated_grader_system.core.config import (
+from automated_answer_grader.api.router import api_router
+from automated_answer_grader.core.config import (
     API_V1_PREFIX,
     APP_NAME,
     APP_VERSION,
