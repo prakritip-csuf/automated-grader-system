@@ -1,0 +1,33 @@
+{
+    "question": "Why do plants need sunlight?",
+    "reference_answer": "Plant use light energy in photosynthesis to produce glucose.",
+    "criteria": [
+        {
+            "id": "photosynthesis",
+            "description": "Identifies photosynthesis",
+            "points": 2,
+            "references": [
+                "Plants use sunlight for photosynthesis.",
+                "Light is used in the process of photosynthesis."
+            ]
+        },
+        {
+            "id": "energy_food",
+            "description": "Explains that light energy helps the plant make food.",
+            "points": 2,
+            "references": [
+                "Light energy is used to make food",
+                "Sunlight provides energy for glucose production."
+            ]
+        },
+        {
+            "id": "glucose",
+            "description": "Mentions glucose or an equivalent description of food production",
+            "points": 1,
+            "references": [
+                "Photosynthesis produces glucose.",
+                "The plant makes its own food."
+            ]
+        }
+    ]
+}
