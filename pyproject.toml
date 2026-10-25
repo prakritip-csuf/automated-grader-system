@@ -12,6 +12,7 @@ dependencies = [
     "jiwer>=4.0.0",
     "opencv-python-headless>=5.0.0.93",
     "pillow>=12.3.0",
+    "pymupdf>=2.0",
     "python-multipart>=0.0.32",
     "sentencepiece>=0.2.2",
     "torch>=2.14.1",
