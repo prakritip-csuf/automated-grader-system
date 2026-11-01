@@ -1,64 +1,98 @@
-"""Handwritten text recognition using TrOCR."""
+from __future__ import annotations
 
-from PIL import Image, ImageOps
+from dataclasses import dataclass
+
 import torch
+from PIL import Image
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 
+from automated_answer_grader.pipelines.preprocessing.handwriting import (
+    segment_lines,
+)
 
-MODEL_NAME = "microsoft/trocr-base-handwritten"
-
+# store complete transcription and individual lines
+@dataclass(frozen=True)
+class RecognitionOutput:
+    text: str
+    lines: list[str]
 
 class TrOCRRecognizer:
-    """Recognize a cropped handwritten text line using TrOCR."""
-
-    def __init__(self) -> None:
-        """Load the processor and pretrained TrOCR model."""
-
+# recognize single-line and multi-line handwritten text
+    def __init__(
+            self,
+            model_name: str = "microsoft/trocr-base-handwritten",
+    ) -> None:
         self.device = torch.device(
             "cuda" if torch.cuda.is_available() else "cpu"
         )
 
-        print(f"Loading TrOCR on device: {self.device}")
+        print(f"Loading TrOCR model on {self.device}...")
 
         self.processor = TrOCRProcessor.from_pretrained(
-            MODEL_NAME
+            model_name
         )
 
         self.model = VisionEncoderDecoderModel.from_pretrained(
-            MODEL_NAME
+            model_name
         )
 
         self.model.to(self.device)
         self.model.eval()
 
-    def recognize(self, image: Image.Image) -> str:
-        """Convert one cropped handwritten line image into text."""
+        print(f"TrOCR model loaded successfully.")
 
-        # Correct image orientation if the image came from a phone.
-        image = ImageOps.exif_transpose(image)
-
-        # TrOCR expects a normal RGB image.
+    def recognize_line(self, image: Image.Image) -> str:
         image = image.convert("RGB")
 
-        # Convert the image into tensors expected by TrOCR.
+        # convert image into tensors expected by TROCR
         pixel_values = self.processor(
             images=image,
             return_tensors="pt",
-        ).pixel_values
+        ).pixel_values.to(self.device)
 
-        pixel_values = pixel_values.to(self.device)
-
-        # Run inference without calculating gradients.
         with torch.inference_mode():
+
+            # generate predicted text token IDs
             generated_ids = self.model.generate(
                 pixel_values,
                 max_new_tokens=128,
+                num_beams=1,
             )
 
-        # Convert generated token IDs back into readable text.
-        recognized_text = self.processor.batch_decode(
+        # convert token IDs into readable text
+        predicted_text = self.processor.batch_decode(
             generated_ids,
             skip_special_tokens=True,
         )[0]
 
-        return recognized_text.strip()
+        return predicted_text.strip()
+
+    def recognize_answer(
+            self,
+            image: Image.Image,
+    ) -> RecognitionOutput:
+        line_images = segment_lines(image)
+        print(f"Detected {len(line_images)} handwritten lines.")
+
+        if not line_images:
+            return RecognitionOutput(
+                text="",
+                lines=[],
+            )
+
+        recognized_lines: list[str] = []
+
+        for index, line_image in enumerate(line_images, start=1,):
+            text = self.recognize_line(line_image)
+            recognized_lines.append(text)
+
+            print(f"Line {index}: {text}")
+
+        # combine lines in top-to-bottom reading order
+        complete_answer = "\n".join(recognized_lines)
+
+        return RecognitionOutput(
+            text=complete_answer,
+            lines=recognized_lines,
+        )
+        

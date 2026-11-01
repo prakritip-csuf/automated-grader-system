@@ -1,29 +1,27 @@
-import io
 from functools import lru_cache
 
 from fastapi import APIRouter, File, HTTPException, UploadFile
 from PIL import Image, UnidentifiedImageError
 
+from automated_answer_grader.pipelines.preprocessing.handwriting import (
+    load_rgb_image,
+)
+
 from automated_answer_grader.pipelines.recognition.trocr import (
     TrOCRRecognizer,
 )
 
-
 router = APIRouter(tags=["recognition"])
 
-
-@lru_cache
+@lru_cache(maxsize=1)
 def get_recognizer() -> TrOCRRecognizer:
-    """Load the TrOCR model once and reuse it."""
-
     return TrOCRRecognizer()
 
-
+# handwriting recognition endpoint
 @router.post("/handwriting")
 async def recognize_handwriting(
     file: UploadFile = File(...),
-) -> dict[str, str]:
-    """Recognize handwritten text from an uploaded image."""
+) -> dict[str, object]:
 
     allowed_types = {
         "image/png",
@@ -33,28 +31,35 @@ async def recognize_handwriting(
 
     if file.content_type not in allowed_types:
         raise HTTPException(
+            status_code = 415,
+            detail="Only PNG and JPEG images are supported.", 
+        )
+
+    image_bytes = await file.read()
+
+    if not image_bytes:
+        raise HTTPException(
             status_code=400,
-            detail="Only PNG and JPEG images are supported.",
+            detail="The uploaded image is empty.",
         )
 
     try:
-        image_bytes = await file.read()
-
-        image = Image.open(
-            io.BytesIO(image_bytes)
-        ).convert("RGB")
+        # convert image bytes into a PIL RGB image
+        image = load_rgb_image(image_bytes)
 
         recognizer = get_recognizer()
 
-        recognized_text = recognizer.recognize(image)
+        result = recognizer.recognize_answer(image)
 
-        return {
-            "filename": file.filename or "unknown",
-            "recognized_text": recognized_text,
-        }
-
-    except UnidentifiedImageError as exc:
+    except (UnidentifiedImageError, OSError, ValueError) as exc:
         raise HTTPException(
             status_code=400,
             detail="The uploaded file is not a valid image.",
         ) from exc
+
+    return {
+        "filename": file.filename or "unknown",
+        "recognized_text": result.text,
+        "lines": result.lines,
+        "line_count": len(result.lines),
+    }

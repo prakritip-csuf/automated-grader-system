@@ -13,49 +13,88 @@ def load_rgb_image(image_bytes: bytes) -> Image.Image:
 
 def segment_lines(
     image: Image.Image,
-    *,
-    min_area: int = 400,
-    horizontal_kernel: int = 35,
     padding: int = 8,
+    min_line_height: int = 12,
+    smooth_window: int = 5,
 ) -> list[Image.Image]:
-    rgb = np.asarray(image)
-    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    """Segment a cropped handwritten answer into text lines."""
 
-    mask = cv2.threshold(
-        gray,
+    rgb = np.asarray(image.convert("RGB"))
+    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
+    height, width = gray.shape
+
+    # Step 1: Threshold the image.
+    blurred = cv2.GaussianBlur(gray, (3, 3), 0)
+
+    binary = cv2.threshold(
+        blurred,
         0,
         255,
         cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU,
     )[1]
 
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (horizontal_kernel, 3))
-    connected = cv2.dilate(mask, kernel, iterations=1)
-
-    contours, _ = cv2.findContours(
-        connected,
-        cv2.RETER_EXTERNAL,
-        cv2.CHAIN_APPROX_SIMPLE,
+    # Step 2: Remove small noise and large background regions.
+    count, labels, stats, _ = cv2.connectedComponentsWithStats(
+        binary,
+        connectivity=8,
     )
 
-    boxes: list[tuple[int, int, int, int]] = []
-    height, width = gray.shape
+    cleaned = np.zeros_like(binary)
 
-    for contour in contours:
-        x, y, w, h = cv2.boundingRect(contour)
-        if w * h < min_area:
-            continue
-        if w < 30 or h < 8:
+    for component in range(1, count):
+        x, y, w, h, area = stats[component]
+
+        if area < 8:
             continue
 
-        x1 = max(0, x - padding)
-        y1 = max(0, y - padding)
-        x2 = min(width, x + w + padding)
-        y2 = min(height, y + h + padding)
-        boxes.append((x1, y1, x2, y2))
+        # Ignore large regions such as shadows or page edges.
+        if w > width * 0.85 and h > height * 0.10:
+            continue
 
-    boxes.sort(key=lambda box: box[1])
+        # Ignore components touching the bottom edge if they occupy a substantial area.
+        if y + h >= height - 2 and area > width * 10:
+            continue
 
-    if not boxes:
-        return [image]
+        cleaned[labels == component] = 255
 
-    return [image.crop(box) for box in boxes]
+    # Step 3: Compute horizontal projection.
+    projection = np.count_nonzero(
+        cleaned,
+        axis=1,
+    ).astype(np.float32)
+
+    # Step 4: Smooth the projection.
+    kernel = np.ones(smooth_window) / smooth_window
+    smoothed = np.convolve(
+        projection,
+        kernel,
+        mode="same",
+    )
+
+    # Step 5: Detect regions with meaningful handwriting.
+    threshold = max(2.0, float(smoothed.max()) * 0.04)
+    active = smoothed > threshold
+
+    boundaries = np.diff(
+        np.pad(active.astype(np.int8), (1, 1))
+    )
+
+    starts = np.where(boundaries == 1)[0]
+    ends = np.where(boundaries == -1)[0]
+
+    # Step 6: Create line crops.
+    lines = []
+
+    for start, end in zip(starts, ends):
+        if end - start < min_line_height:
+            continue
+
+        top = max(0, int(start) - padding)
+        bottom = min(height, int(end) + padding)
+
+        line = image.crop((0, top, width, bottom))
+        lines.append(line)
+
+    return lines
+
+
