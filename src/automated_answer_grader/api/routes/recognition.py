@@ -13,9 +13,11 @@ from automated_answer_grader.pipelines.recognition.trocr import (
 
 router = APIRouter(tags=["recognition"])
 
+
 @lru_cache(maxsize=1)
 def get_recognizer() -> TrOCRRecognizer:
     return TrOCRRecognizer()
+
 
 # handwriting recognition endpoint
 @router.post("/handwriting")
@@ -31,8 +33,8 @@ async def recognize_handwriting(
 
     if file.content_type not in allowed_types:
         raise HTTPException(
-            status_code = 415,
-            detail="Only PNG and JPEG images are supported.", 
+            status_code=415,
+            detail="Only PNG and JPEG images are supported.",
         )
 
     image_bytes = await file.read()

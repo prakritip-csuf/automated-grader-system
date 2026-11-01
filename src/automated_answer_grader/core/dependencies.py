@@ -13,4 +13,3 @@ def get_trocr_recognizer() -> TrOCRRecognizer:
 @lru_cache(maxsize=1)
 def get_semantic_grader() -> SemanticGrader:
     return SemanticGrader()
-

@@ -1,16 +1,19 @@
 from pydantic import BaseModel, Field
 
+
 class RubricCriterion(BaseModel):
     id: str
     description: str
     points: float = Field(gt=0)
     references: list[str] = Field(min_length=1)
 
+
 class GradeRequest(BaseModel):
     question: str
     reference_answer: str
     student_answer: str
     criteria: list[RubricCriterion] = Field(min_length=1)
+
 
 class CriterionResult(BaseModel):
     criterion_id: str
@@ -22,6 +25,7 @@ class CriterionResult(BaseModel):
     matched_reference: str
     contradiction_probability: float | None = None
     review: bool = False
+
 
 class GradeResponse(BaseModel):
     score: float

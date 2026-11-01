@@ -53,3 +53,9 @@ checkpoints/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# debug images
+segmentation_debug/
+*.tmp
+
+/data/evaluation/iam

@@ -6,9 +6,10 @@ from automated_answer_grader.pipelines.grading.semantic import SemanticGrader
 
 router = APIRouter(prefix="/grading", tags=["grading"])
 
-@router.post("/grade", response_model = GradeResponse)
+
+@router.post("/grade", response_model=GradeResponse)
 def grade_answer(
     request: GradeRequest,
     grader: SemanticGrader = Depends(get_semantic_grader),
-)-> GradeResponse:
+) -> GradeResponse:
     return grader.grade(request)

@@ -5,7 +5,7 @@ from collections.abc import Iterator
 import pytest
 from fastapi.testclient import TestClient
 
-from automated_grader_system.main import app
+from automated_answer_grader.main import app
 
 
 @pytest.fixture

@@ -75,9 +75,7 @@ def segment_lines(
     threshold = max(2.0, float(smoothed.max()) * 0.04)
     active = smoothed > threshold
 
-    boundaries = np.diff(
-        np.pad(active.astype(np.int8), (1, 1))
-    )
+    boundaries = np.diff(np.pad(active.astype(np.int8), (1, 1)))
 
     starts = np.where(boundaries == 1)[0]
     ends = np.where(boundaries == -1)[0]
@@ -96,5 +94,3 @@ def segment_lines(
         lines.append(line)
 
     return lines
-
-

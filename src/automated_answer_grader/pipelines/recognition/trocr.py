@@ -10,31 +10,27 @@ from automated_answer_grader.pipelines.preprocessing.handwriting import (
     segment_lines,
 )
 
+
 # store complete transcription and individual lines
 @dataclass(frozen=True)
 class RecognitionOutput:
     text: str
     lines: list[str]
 
+
 class TrOCRRecognizer:
-# recognize single-line and multi-line handwritten text
+    # recognize single-line and multi-line handwritten text
     def __init__(
-            self,
-            model_name: str = "microsoft/trocr-base-handwritten",
+        self,
+        model_name: str = "microsoft/trocr-base-handwritten",
     ) -> None:
-        self.device = torch.device(
-            "cuda" if torch.cuda.is_available() else "cpu"
-        )
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         print(f"Loading TrOCR model on {self.device}...")
 
-        self.processor = TrOCRProcessor.from_pretrained(
-            model_name
-        )
+        self.processor = TrOCRProcessor.from_pretrained(model_name)
 
-        self.model = VisionEncoderDecoderModel.from_pretrained(
-            model_name
-        )
+        self.model = VisionEncoderDecoderModel.from_pretrained(model_name)
 
         self.model.to(self.device)
         self.model.eval()
@@ -51,7 +47,6 @@ class TrOCRRecognizer:
         ).pixel_values.to(self.device)
 
         with torch.inference_mode():
-
             # generate predicted text token IDs
             generated_ids = self.model.generate(
                 pixel_values,
@@ -68,8 +63,8 @@ class TrOCRRecognizer:
         return predicted_text.strip()
 
     def recognize_answer(
-            self,
-            image: Image.Image,
+        self,
+        image: Image.Image,
     ) -> RecognitionOutput:
         line_images = segment_lines(image)
         print(f"Detected {len(line_images)} handwritten lines.")
@@ -82,7 +77,10 @@ class TrOCRRecognizer:
 
         recognized_lines: list[str] = []
 
-        for index, line_image in enumerate(line_images, start=1,):
+        for index, line_image in enumerate(
+            line_images,
+            start=1,
+        ):
             text = self.recognize_line(line_image)
             recognized_lines.append(text)
 
@@ -95,4 +93,3 @@ class TrOCRRecognizer:
             text=complete_answer,
             lines=recognized_lines,
         )
-        

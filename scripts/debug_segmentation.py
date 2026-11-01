@@ -7,6 +7,7 @@ from automated_answer_grader.pipelines.preprocessing.handwriting import (
     segment_lines,
 )
 
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("image_path", type=Path)

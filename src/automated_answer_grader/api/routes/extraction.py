@@ -9,10 +9,10 @@ from automated_answer_grader.pipelines.recognition.trocr import TrOCRRecognizer
 
 router = APIRouter(prefix="/extraction", tags=["extraction"])
 
+
 @router.post("/pdf")
 async def extract_pdf(
-    file: UploadFile = File(...),
-    recognizer: TrOCRRecognizer = Depends(get_trocr_recognizer)
+    file: UploadFile = File(...), recognizer: TrOCRRecognizer = Depends(get_trocr_recognizer)
 ) -> dict[str, str]:
     if file.content_type != "application/pdf":
         raise HTTPException(status_code=415, detail="Upload a PDF File.")
@@ -29,4 +29,3 @@ async def extract_pdf(
         )
 
     return {"text": text, "method": method}
-    
