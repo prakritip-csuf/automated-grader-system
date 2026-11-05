@@ -7,7 +7,15 @@ from automated_answer_grader.pipelines.grading.semantic import SemanticGrader
 router = APIRouter(prefix="/grading", tags=["grading"])
 
 
-@router.post("/grade", response_model=GradeResponse)
+@router.post(
+    "/grade",
+    response_model=GradeResponse,
+    summary="Grade a student short answer.",
+    description=(
+        "Evaluate a typed or OCR-recognized student answer "
+        "against weighted rubric criteria using semantic similarity."
+    ),
+)
 def grade_answer(
     request: GradeRequest,
     grader: SemanticGrader = Depends(get_semantic_grader),

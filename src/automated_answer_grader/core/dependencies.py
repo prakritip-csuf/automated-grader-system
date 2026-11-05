@@ -12,4 +12,9 @@ def get_trocr_recognizer() -> TrOCRRecognizer:
 
 @lru_cache(maxsize=1)
 def get_semantic_grader() -> SemanticGrader:
-    return SemanticGrader()
+    return SemanticGrader(
+        embedding_model=("sentence-transformers/all-MiniLM-L6-v2"),
+        partial_threshold=0.50,
+        full_threshold=0.72,
+        use_nli=False,
+    )
