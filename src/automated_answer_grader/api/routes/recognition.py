@@ -11,6 +11,10 @@ from automated_answer_grader.pipelines.recognition.trocr import (
     TrOCRRecognizer,
 )
 
+from automated_answer_grader.core.dependencies import (
+    get_trocr_recognizer,
+)
+
 router = APIRouter(tags=["recognition"])
 
 
@@ -49,7 +53,7 @@ async def recognize_handwriting(
         # convert image bytes into a PIL RGB image
         image = load_rgb_image(image_bytes)
 
-        recognizer = get_recognizer()
+        recognizer = get_trocr_recognizer()
 
         result = recognizer.recognize_answer(image)
 
