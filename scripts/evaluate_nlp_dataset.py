@@ -15,7 +15,7 @@ def main() -> None:
     base = Path("data/evaluation/grading")
 
     # Use validation first. Reserve test.csv for final evaluation.
-    data = pd.read_csv(base / "test.csv")
+    data = pd.read_csv(base / "validation.csv")
 
     rubrics = json.loads(
         (base / "rubrics.json").read_text(encoding="utf-8")

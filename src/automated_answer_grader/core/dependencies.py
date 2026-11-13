@@ -14,7 +14,7 @@ def get_trocr_recognizer() -> TrOCRRecognizer:
 def get_semantic_grader() -> SemanticGrader:
     return SemanticGrader(
         embedding_model=("sentence-transformers/all-MiniLM-L6-v2"),
-        partial_threshold=0.50,
-        full_threshold=0.72,
+        partial_threshold=0.20,
+        full_threshold=0.80,
         use_nli=False,
     )
