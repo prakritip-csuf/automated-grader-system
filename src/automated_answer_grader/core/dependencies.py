@@ -16,5 +16,7 @@ def get_semantic_grader() -> SemanticGrader:
         embedding_model=("sentence-transformers/all-MiniLM-L6-v2"),
         partial_threshold=0.20,
         full_threshold=0.80,
-        use_nli=False,
+        contradiction_threshold=0.60,
+        use_nli=True,
+        nli_policy="penalty",
     )

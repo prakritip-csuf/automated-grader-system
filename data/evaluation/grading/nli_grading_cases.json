@@ -1,0 +1,306 @@
+[
+  {
+    "case_id": "nli_photo_1",
+    "question_id": "QNLI01",
+    "question": "Why is sunlight necessary for photosynthesis?",
+    "reference_answer": "Plants require sunlight to perform photosynthesis.",
+    "student_answer": "Plants use sunlight during photosynthesis.",
+    "criteria": [
+      {
+        "id": "photo_c1",
+        "description": "Plants require sunlight to perform photosynthesis.",
+        "points": 2,
+        "references": [
+          "Plants require sunlight to perform photosynthesis."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_photo_2",
+    "question_id": "QNLI01",
+    "question": "Why is sunlight necessary for photosynthesis?",
+    "reference_answer": "Plants require sunlight to perform photosynthesis.",
+    "student_answer": "Plants do not require sunlight to perform photosynthesis.",
+    "criteria": [
+      {
+        "id": "photo_c1",
+        "description": "Plants require sunlight to perform photosynthesis.",
+        "points": 2,
+        "references": [
+          "Plants require sunlight to perform photosynthesis."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_binary_1",
+    "question_id": "QNLI02",
+    "question": "What condition must be met to use binary search?",
+    "reference_answer": "Binary search requires the input elements to be sorted.",
+    "student_answer": "Binary search works on a sorted list.",
+    "criteria": [
+      {
+        "id": "binary_c1",
+        "description": "Binary search requires the input elements to be sorted.",
+        "points": 2,
+        "references": [
+          "Binary search requires the input elements to be sorted."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_binary_2",
+    "question_id": "QNLI02",
+    "question": "What condition must be met to use binary search?",
+    "reference_answer": "Binary search requires the input elements to be sorted.",
+    "student_answer": "Binary search does not require the input elements to be sorted.",
+    "criteria": [
+      {
+        "id": "binary_c1",
+        "description": "Binary search requires the input elements to be sorted.",
+        "points": 2,
+        "references": [
+          "Binary search requires the input elements to be sorted."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_stack_1",
+    "question_id": "QNLI03",
+    "question": "What order does a stack follow?",
+    "reference_answer": "A stack follows last-in, first-out order.",
+    "student_answer": "A stack removes the most recently added item first.",
+    "criteria": [
+      {
+        "id": "stack_c1",
+        "description": "A stack follows last-in, first-out order.",
+        "points": 2,
+        "references": [
+          "A stack follows last-in, first-out order."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_stack_2",
+    "question_id": "QNLI03",
+    "question": "What order does a stack follow?",
+    "reference_answer": "A stack follows last-in, first-out order.",
+    "student_answer": "A stack does not follow last-in, first-out order.",
+    "criteria": [
+      {
+        "id": "stack_c1",
+        "description": "A stack follows last-in, first-out order.",
+        "points": 2,
+        "references": [
+          "A stack follows last-in, first-out order."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_vcs_1",
+    "question_id": "QNLI04",
+    "question": "What does a version control system do?",
+    "reference_answer": "Version control records changes to project files over time.",
+    "student_answer": "Version control tracks changes to code files.",
+    "criteria": [
+      {
+        "id": "vcs_c1",
+        "description": "Version control records changes to project files over time.",
+        "points": 2,
+        "references": [
+          "Version control records changes to project files over time."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_vcs_2",
+    "question_id": "QNLI04",
+    "question": "What does a version control system do?",
+    "reference_answer": "Version control records changes to project files over time.",
+    "student_answer": "Version control never records changes to project files.",
+    "criteria": [
+      {
+        "id": "vcs_c1",
+        "description": "Version control records changes to project files over time.",
+        "points": 2,
+        "references": [
+          "Version control records changes to project files over time."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_overfit_1",
+    "question_id": "QNLI05",
+    "question": "What happens when a machine learning model overfits?",
+    "reference_answer": "Overfitting means a model learns the training data too closely and generalizes poorly.",
+    "student_answer": "An overfit model fits training data too closely and performs poorly on new data.",
+    "criteria": [
+      {
+        "id": "overfit_c1",
+        "description": "Overfitting means a model learns the training data too closely and generalizes poorly.",
+        "points": 2,
+        "references": [
+          "Overfitting means a model learns the training data too closely and generalizes poorly."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_overfit_2",
+    "question_id": "QNLI05",
+    "question": "What happens when a machine learning model overfits?",
+    "reference_answer": "Overfitting means a model learns the training data too closely and generalizes poorly.",
+    "student_answer": "An overfit model does not fit the training data closely.",
+    "criteria": [
+      {
+        "id": "overfit_c1",
+        "description": "Overfitting means a model learns the training data too closely and generalizes poorly.",
+        "points": 2,
+        "references": [
+          "Overfitting means a model learns the training data too closely and generalizes poorly."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_tcp_1",
+    "question_id": "QNLI06",
+    "question": "What does TCP provide?",
+    "reference_answer": "TCP provides reliable and ordered delivery of data.",
+    "student_answer": "TCP delivers data reliably and in order.",
+    "criteria": [
+      {
+        "id": "tcp_c1",
+        "description": "TCP provides reliable and ordered delivery of data.",
+        "points": 2,
+        "references": [
+          "TCP provides reliable and ordered delivery of data."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_tcp_2",
+    "question_id": "QNLI06",
+    "question": "What does TCP provide?",
+    "reference_answer": "TCP provides reliable and ordered delivery of data.",
+    "student_answer": "TCP does not provide reliable delivery of data.",
+    "criteria": [
+      {
+        "id": "tcp_c1",
+        "description": "TCP provides reliable and ordered delivery of data.",
+        "points": 2,
+        "references": [
+          "TCP provides reliable and ordered delivery of data."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_cpu_1",
+    "question_id": "QNLI07",
+    "question": "What does the CPU do?",
+    "reference_answer": "The CPU executes program instructions.",
+    "student_answer": "A CPU processes and executes instructions.",
+    "criteria": [
+      {
+        "id": "cpu_c1",
+        "description": "The CPU executes program instructions.",
+        "points": 2,
+        "references": [
+          "The CPU executes program instructions."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_cpu_2",
+    "question_id": "QNLI07",
+    "question": "What does the CPU do?",
+    "reference_answer": "The CPU executes program instructions.",
+    "student_answer": "The CPU does not execute program instructions.",
+    "criteria": [
+      {
+        "id": "cpu_c1",
+        "description": "The CPU executes program instructions.",
+        "points": 2,
+        "references": [
+          "The CPU executes program instructions."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  },
+  {
+    "case_id": "nli_encrypt_1",
+    "question_id": "QNLI08",
+    "question": "What is the purpose of encryption?",
+    "reference_answer": "Encryption transforms readable information into an encoded form to protect confidentiality.",
+    "student_answer": "Encryption encodes readable data to protect it from unauthorized readers.",
+    "criteria": [
+      {
+        "id": "encrypt_c1",
+        "description": "Encryption transforms readable information into an encoded form to protect confidentiality.",
+        "points": 2,
+        "references": [
+          "Encryption transforms readable information into an encoded form to protect confidentiality."
+        ]
+      }
+    ],
+    "human_score": 2,
+    "expected_contradiction": false
+  },
+  {
+    "case_id": "nli_encrypt_2",
+    "question_id": "QNLI08",
+    "question": "What is the purpose of encryption?",
+    "reference_answer": "Encryption transforms readable information into an encoded form to protect confidentiality.",
+    "student_answer": "Encryption does not transform readable information into an encoded form.",
+    "criteria": [
+      {
+        "id": "encrypt_c1",
+        "description": "Encryption transforms readable information into an encoded form to protect confidentiality.",
+        "points": 2,
+        "references": [
+          "Encryption transforms readable information into an encoded form to protect confidentiality."
+        ]
+      }
+    ],
+    "human_score": 0,
+    "expected_contradiction": true
+  }
+]
