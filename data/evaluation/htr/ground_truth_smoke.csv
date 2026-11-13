@@ -1,0 +1,4 @@
+sample_id,image_path,reference_text,writer_id,expected_lines,manual_line_dr
+6812,data/evaluation/htr/ASAP_Prompt3/SAS_3_6812.png,Pandas and koalas are similar because they both need a certain food that they eat such as bamboo and eucalyptus leaves but a python will not eat anything but it needs in certain climate to be able to live there.,,5,
+6814,data/evaluation/htr/ASAP_Prompt3/SAS_3_6814.png,"Pandas are similar to koalas because they are both specialists, that must have special surroundings and certain things to eat. Pandas and koalas are different from pythons because a python can live almost anywhere with the help of the climate generalist which is a human being as stated in paragraph 20 (Achenbach,5).",,6,
+6816,data/evaluation/htr/ASAP_Prompt3/SAS_3_6816.png,Pandas only eat bamboo and koalas only eat eucalyptus leaves. This animals are specialist. Pythons are generalist they can survive on almost any thing.,,2,

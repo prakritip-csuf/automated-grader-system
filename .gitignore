@@ -59,3 +59,5 @@ segmentation_debug/
 *.tmp
 
 /data/evaluation/iam
+/data/evaluation/htr/ASAP_Prompt3
+/data/evaluation/htr/manual_lines

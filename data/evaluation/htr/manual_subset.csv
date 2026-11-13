@@ -1,0 +1,3 @@
+sample_id,image_path,reference_text,writer_id,expected_lines,manual_line_dr
+6809,data/evaluation/htr/ASAP_Prompt3/SAS_3_6809.png,"As described in the article, pandas eat an abundance of bamboo and therefore are specialist to China, while the koala ''eats eucalyptus leaves almost exclusively.'' Both these animals are specialists to one habitat while the python, a generalist is able to live in a wider range of habitats virtually anywhere.",,8,data/evaluation/htr/manual_lines/SAS_3_6809
+7009,data/evaluation/htr/ASAP_Prompt3/SAS_3_7009.png,In China the panda bear only eats bambo nothing else and the koala does the same with eucalyptus. The python eat anything that falls into its gullet.,,4,data/evaluation/htr/manual_lines/SAS_3_7009

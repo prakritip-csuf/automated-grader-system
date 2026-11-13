@@ -1,0 +1,174 @@
+response_id,student_id,question_id,student_answer,human_score
+S102_Q1,S102,Q1,"A version control system (VCS) is a software tool that allows tracking and managing changes to a project's files, especially source code. It records each version of the files, allowing developers to revert to previous states of the project, compare changes, and collaborate without data loss.",9.0
+S102_Q2,S102,Q2,"Narrow AI refers to artificial intelligence designed to perform a single specific task or a limited set of tasks. It cannot “think,” understand, or act beyond what it was programmed to do. Example: recommendation systems like Netflix or YouTube. General AI represents a hypothetical type of artificial intelligence capable of learning, understanding, and solving any intellectual task like a human. It could adapt to new situations and transfer knowledge across domains. Example: does not yet exist, but theoretically a robot that could learn any profession and behave like a human in an unknown environment.",10.0
+S102_Q3,S102,Q3,"The Naive Bayes classifier is a supervised machine learning algorithm based on Bayes' theorem, primarily used for classification. It is “naive” because it assumes all features are independent, which is rarely true in practice, but it works surprisingly well in many cases.",5.5
+S102_Q4,S102,Q4,"Knowledge base
+Inference engine
+User interface
+Knowledge enrichment module
+Explanation module",2.0
+S102_Q5,S102,Q5,"It prevents identity theft; for example, major banks use facial recognition to verify if a person logging into an account is indeed the account holder. Upon account creation, ID is used and then the user is asked to look at the camera, move their face left and right so the application records the user's face to later be used as a two‑step verification method (2FA).",6.5
+S107_Q1,S107,Q1,"It is a system used to track multiple versions of the same project.
+Software development in a team involves developing the project in parallel, which means different versions for each developer, which are then merged.",6.0
+S107_Q2,S107,Q2,"Narrow AI is specialized for a well-defined purpose, while general AI aims to cover the full rational and informational spectrum.",5.0
+S107_Q3,S107,Q3,The Naive Bayes classifier is a coefficient used for processing data by AI.,3.5
+S107_Q4,S107,Q4,I don't know.,1.0
+S107_Q5,S107,Q5,Facial recognition is mainly used to identify/authenticate the user. An example would be unlocking a smartphone.,4.5
+S115_Q1,S115,Q1,"A version control system is software that tracks and manages changes made to source code. It is essential in software development because it allows efficient collaboration, preserves change history, facilitates rollback to previous versions, and supports modern continuous delivery processes.",9.5
+S115_Q2,S115,Q2,"Narrow AI is specialized in a single task (e.g., Siri), while general AI could perform any human intellectual task (e.g., Jarvis), although it doesn't yet exist in reality.",7.5
+S115_Q3,S115,Q3,"The Naive Bayes classifier is a machine learning algorithm based on Bayes' theorem, used for data classification. It is called 'naive' because it assumes all features are independent, which is rarely fully true in practice, but it still works well in many cases.",5.5
+S115_Q4,S115,Q4,"The search algorithm in an expert system starts from known facts, applies relevant rules to generate new conclusions, and repeats the process until a decision is reached or no applicable rules remain.",4.5
+S115_Q5,S115,Q5,"Facial recognition helps identify and authenticate individuals and is used in security applications such as phone unlocking, access control, and video surveillance.",6.5
+S117_Q1,S117,Q1,"It is a tool that tracks and manages changes made to source code. It is essential in software development for efficient collaboration, avoiding conflicts, and maintaining a history of changes.",8.5
+S117_Q2,S117,Q2,"Narrow AI is specialized in a single task and can outperform humans only in that specific area (e.g., Siri, Alexa, autonomous vehicles). General AI would have intelligence similar to that of a human, being able to learn and solve any intellectual problem across domains (e.g., a hypothetical autonomous robot).",9.5
+S117_Q3,S117,Q3,"The Naive Bayes classifier is a simple machine learning algorithm based on Bayes' theorem. It estimates the probability that an item belongs to a certain class and makes decisions by choosing the class with the highest probability. It is used, for example, in spam filtering or sentiment analysis.",7.5
+S117_Q4,S117,Q4,"Initialization: the initial state and goal are defined.
+Rule selection: the system chooses a rule applicable based on existing knowledge.
+Rule application: the selected rule is applied to generate a new state.
+Goal verification: it checks if the current state satisfies the goal.
+Repetition: if the goal is not reached, steps 2–4 are repeated.
+Stopping: the algorithm stops when a solution is found or no rules are applicable.",4.0
+S117_Q5,S117,Q5,"Facial recognition plays an essential role in modern security applications, being used for identifying and authenticating individuals in video surveillance systems, access control, device unlocking, and fraud prevention, due to its fast and automated ability to match faces with databases.",7.0
+S125_Q1,S125,Q1,"A version control system is an instrument that allows the management of changes made to source code over time. It keeps track of modifications, enables returning to previous versions and facilitates collaboration between multiple developers. It's essential in software development because it reduces the risk of losing code, helps identify errors, allows simultaneous work on a team and ensures efficient project organization.",8.5
+S125_Q2,S125,Q2,"Restricted AI (Weak AI) is designed to perform a specific task and cannot function outside of that domain. Examples include voice assistants, recommendation systems or facial recognition.
+
+General AI (Strong AI) would have the ability to understand, learn and apply knowledge in a wide range of domains, similar to human intelligence. Currently, General AI does not exist practically, being only a theoretical concept.",8.5
+S125_Q3,S125,Q3,"The Naive Bayes classifier is an automatic learning algorithm based on Bayes' theorem, which assumes independence between features. It is used for classifying data into different categories based on probabilities. In the decision-making process, Naive Bayes calculates the probability that an example belongs to a class and chooses the one with the highest probability, being frequently used in spam filtering or sentiment analysis.",8.0
+S125_Q4,S125,Q4,"1. Defining the problem and initial state.
+2. Representing knowledge in the form of rules and facts in the knowledge base.
+3. Applying an inference mechanism to select relevant rules.
+4. Exploring the search space by applying the rules (e.g., forward or backward chaining).
+5. Obtaining a conclusion or solution, optionally explaining the reasoning followed.",7.0
+S125_Q5,S125,Q5,"Facial recognition plays an important role in modern security by quickly identifying and authenticating individuals. It is used for building access control, device unlocking, video surveillance, and fraud prevention. The main advantage is the increased level of security and efficiency, as it allows identity verification without physical contact; however, strict measures are required to protect personal data.",8.0
+S129_Q1,S129,Q1,"Soft, Git, which saves the code history and allows collaborative work without conflicts.",8.0
+S129_Q2,S129,Q2,"ANA is specialized in a task, Siri/Bixby, AGI is hypothetical human-level intelligence, capable of anything, Gemini/ChatGPT.",6.5
+S129_Q3,S129,Q3,"Probability-based classification algorithm that considers features to be independent, e.g. spam detection.",4.0
+S129_Q4,S129,Q4,Problem identification -> Application of rules (inference) -> Search for solution -> Result.,2.0
+S129_Q5,S129,Q5,Rapid identification and secure access through biometrics.,3.0
+S138_Q1,S138,Q1,A Version Control System (VCS) is a system that tracks all the changes made in your code over time.,5.5
+S138_Q2,S138,Q2,"Narrow AI is designed to perform one task (or a specific domain) very well, but it cannot operate outside that scope and does not have general understanding.
+Examples: Siri/Alexa respond to voice commands.
+
+General AI (AGI) would be an artificial intelligence able to understand, learn, and apply knowledge across any domain—similar to a human, not limited to a single task.
+Example: A robot that learns to cook, then repair a car, then teach mathematics.",8.0
+S138_Q3,S138,Q3,"Naive Bayes is a classification algorithm in Machine Learning based on:
+Bayes' Theorem + the assumption that features are independent of each other (""naive"" = naive)
+It is used to decide:
+""What category does this thing belong to?""
+Naive Bayes:
+Receives data (features)
+Calculates the probability for each possible class
+Chooses the class with the highest probability
+decision = most probable class",6.5
+S138_Q4,S138,Q4,"In an expert system, the search algorithm is used to:
+find a solution/conclusion based on known rules and facts.
+The system has:
+-knowledge base (IF-THEN rules)
+-fact base (what we know about the current situation)
+-inference engine (the one that searches)",6.5
+S138_Q5,S138,Q5,"This is an artificial intelligence technology that:
+
+identifies or verifies a person's identity based on their face using:
+-face detection
+-feature extraction
+-comparison with a database.",4.0
+S141_Q1,S141,Q1,"Version Control System is a system which helps developers to track their changes and modifications, essentially useful for collaborative work, when several devs are working on the same project concurrently, and all these changes should be synced and merged. It is really useful for all above named reasons",8.5
+S141_Q2,S141,Q2,"General AI is a LLM model trained on all kind of data, which doesn't make it really competitive and precise in certain fields, but it can respond to daily questions and general problems without issues. Confined AI is trained on special info, so it only can offer its probability in this field, but rather more precisely",3.5
+S141_Q3,S141,Q3,No idea,0.5
+S141_Q4,S141,Q4,No idea,0.5
+S141_Q5,S141,Q5,"First and foremost the very thing which comes to my mind is the feature to unlock the screen on modern smartphones? Pretty useful. In other fields it may be used to setup automatic face recognition in order to.... for example increase / decrease your social status, like in China",6.0
+S142_Q1,S142,Q1,A system of work control saves the history of work and is essential for working easily in a team without deleting others' errors.,6.0
+S142_Q2,S142,Q2,"Restricted AI is an instrument, while General AI would be an entity. Restricted AI is like a tool in the toolbox: it does one thing well, but doesn't ""think"" beyond that.
+
+General AI
+Is like a coworker or scientist: it has the ability to understand the world, take initiative and learn anything.",4.5
+S142_Q3,S142,Q3,The Naive Bayes classifier is an algorithm that calculates the probabilities (likelihood) of something belonging to a category.,5.5
+S142_Q4,S142,Q4,"Matching
+Conflict Resolution/Selection
+Execution
+Repeat",3.0
+S142_Q5,S142,Q5,Identity verification in cases where the person represents a danger to society.,1.5
+S144_Q1,S144,Q1,"Software that saves and manages the modifications made to a project. Essential because: you don't lose code 
+you can go back to a stable version, team works in parallel (branches)",6.5
+S144_Q2,S144,Q2,"While narrow AI is specialized in precise tasks such as virtual assistants (Siri) or recommendation algorithms, general AI represents the hypothetical system capable of understanding, learning and applying intelligence in any domain, just like a human.",7.0
+S144_Q3,S144,Q3,The Naive Bayes classifier is a probabilistic algorithm that facilitates the decision-making process by calculating the probability of each possible outcome based on input data.,6.5
+S144_Q4,S144,Q4,"The search algorithm in an expert system, coordinated by the inference engine, follows a cycle of ""matching, selection and execution"", where it analyzes facts from the database in relation to logical rules, resolves conflicts between multiple applicable rules and uses forward chaining (from cause to effect) or backward chaining (from hypothesis to evidence) to deduce a valid conclusion.",8.5
+S144_Q5,S144,Q5,"Facial recognition acts as an advanced biometric system that increases security by transforming unique physical features into digital signatures, thus facilitating access control, proactive surveillance and identity authentication in a fast and non-invasive manner.",8.0
+S148_Q1,S148,Q1,"A version control system (VCS - Version Control System) is, in essence, a ""time machine"" for your code. It's a software tool that monitors and manages all the changes made to files over time.",6.5
+S148_Q2,S148,Q2,"This is one of the most important distinctions in understanding technology. The fundamental difference does not depend on how ""intelligent"" a program is, but rather its flexibility and purpose.",2.0
+S148_Q3,S148,Q3,"The Naive Bayes classifier is a machine learning algorithm based on the direct application of Bayes' Theorem. It is mainly used for classification, i.e., to determine which category a particular dataset belongs to.",5.5
+S148_Q4,S148,Q4,"An expert system does not simply ""guess"", but uses an inference engine to traverse a knowledge base full of rules of the type IF (condition) THEN (action).",4.0
+S148_Q5,S148,Q5,"Facial recognition has evolved from an experimental technology to a central pillar of digital and physical security. In modern applications, it is no longer just about ""identifying a face"", but rather transforming biometric features into unique mathematical data that cannot be easily replicated.",4.0
+S153_Q1,S153,Q1,It is an instrument that follows and manages modifications made to source code.,2.5
+S153_Q2,S153,Q2,"The difference between narrow AI and general AI lies in the level of intelligence and the ability to adapt of systems. Examples: virtual assistants (Siri), recommendation systems (Spotify)",6.0
+S153_Q3,S153,Q3,"It is a classification algorithm from machine learning, based on Bayes' theorem and a simplifying assumption.",3.5
+S153_Q4,S153,Q4,Representing the problem; initializing the knowledge base; choosing the search strategy; applying the rules; exploring the state space; evaluating states; checking the goal; returning the solution.,5.0
+S153_Q5,S153,Q5,To confirm that the person holding the device accesses the application.,1.0
+S159_Q1,S159,Q1,A Version Control System is a software tool that monitors and manages all changes made to the source code of a project over time.,5.5
+S159_Q2,S159,Q2,"Narrow AI: It's specialized and limited to a predefined context. Ex: Facial Recognition
+ General AI: Versatility, adaptability, and the ability to transfer knowledge from one domain to another. Ex: The Turing Test-passing machine",7.5
+S159_Q3,S159,Q3,"The Naive Bayes classifier is a machine learning algorithm based on Bayes' theorem, mainly used for solving classification problems. It is considered ""naive"" because it assumes that the presence of any particular feature in a class is completely independent of the presence of any other feature, which greatly simplifies mathematical calculations.",5.5
+S159_Q4,S159,Q4,"The search algorithm in an expert system is not a simple file search, but rather the ""engine"" that drives the reasoning process. It operates within the Inference Engine, navigating through a Knowledge Base full of rules like ""IF... THEN...",4.5
+S159_Q5,S159,Q5,"In the modern security context, it has evolved from an experimental technology to a critical tool for identification and monitoring.",2.0
+S163_Q1,S163,Q1,"A version control system is an instrument that saves the history of code modifications. It's essential because it allows going back to previous versions (safety), facilitates team collaboration without conflicts, enables testing new ideas on separate branches without damaging the main project.",9.0
+S163_Q2,S163,Q2,"1) Narrow AI: Specialized for a single task; it cannot do anything outside its domain.
+Examples: Google Maps, spam filters, facial recognition, ChatGPT (in its current form).
+
+2) General AI (AGI): A hypothetical human-level intelligence that could learn and solve any type of problem.
+Examples: Robots from science-fiction movies (e.g., C‑3PO, Terminator). It does not exist in reality yet.",10.0
+S163_Q3,S163,Q3,"Naive Bayes is a classification algorithm based on probabilities, which assumes that all features of an object are independent from each other. Application in decisions: Calculates the probability of each option based on historical data. Chooses the most probable variant (e.g. ""The email is 95% Spam, so I'll block it"").",8.0
+S163_Q4,S163,Q4,"The inference engine (search algorithm) follows these steps:
+Matching: Compare current data with ""IF..."" type rules.
+Selection: Choose the most relevant rule (if multiple match).
+Execution: Apply the rule and generate a new conclusion (""THEN..."").
+Repetition: Repeat the process until finding the final solution.
+It is achieved through two strategies: Forward chaining (from facts to goal) or Backward chaining (from goal to facts).",8.5
+S163_Q5,S163,Q5,"Facial recognition works as a fast biometric identifier. Main roles: 
+Secure access: Unlocking devices and entering buildings without keys. 
+Monitoring: Automatic identification of suspicious people in public spaces. 
+Fraud prevention: Verifying identities in bank transactions and payments. 
+Border control: Rapid verification of passports at airports.",8.5
+S169_Q1,S169,Q1,It is a software that follows the code modifications. It is essential for collaboration between programmers and for restoring previous versions in case of errors.,5.5
+S169_Q2,S169,Q2,"Restricted AI (e.g. FaceID, DeepL) performs a single task. General AI (theoretical) can solve any human intellectual problem.",5.5
+S169_Q3,S169,Q3,"It is a probability-based model based on the independence of variables. It is applied in decision-making by calculating the maximum probability that a set of data belongs to a category (e.g., spam filtering).",5.5
+S169_Q4,S169,Q4,The system uses Forward Chaining (from facts to conclusions) or Backward Chaining (from hypothesis to fact verification) to traverse the knowledge base.,6.5
+S169_Q5,S169,Q5,"Instantaneous biometric identification, non-contact access control and automatic monitoring of restricted perimeters.",5.5
+S179_Q1,S179,Q1,"A version control system is an application that manages the history of changes made to source code, allowing programmers to recover previous versions and collaborate efficiently without blocking each other. It's essential because it provides protection against fatal errors, facilitates simultaneous work in a team, and keeps a clear record of all interventions on the project.",8.5
+S179_Q2,S179,Q2,"Artificial Intelligence Limited (ANI) is designed to execute a single specific task, such as facial recognition or spam filtering, operating only within the limits set by programmers. In contrast, General Artificial Intelligence (AGI) represents a hypothetical concept of a system capable of understanding, learning and applying knowledge in any field at a human level, possessing consciousness and autonomous adaptability.
+
+Examples of limited AI include virtual assistants like Siri, Netflix recommendation algorithms or self-driving systems. For general AI there are no real examples yet, this being encountered only in science fiction, in the form of entities such as HAL 9000 from ""2001: A Space Odyssey"" or Skynet.",9.0
+S179_Q3,S179,Q3,"The Naive Bayes classifier is an automatic learning algorithm based on Bayes' theorem, which calculates the probability that an element belongs to a category based on its features. It is called ""naive"" because it simplifies the assumption that all input variables are completely independent of each other, greatly reducing the complexity of mathematical calculations.
+
+In the decision-making process, the algorithm is used to quickly classify data in real-time, being extremely efficient for large datasets and text. For example, in email filtering, it decides whether a message is ""Spam"" or ""Inbox"" by analyzing the frequency of key words and calculating the final probability for each label. Other common applications include sentiment analysis in reviews, preliminary medical diagnosis, or recommendation systems, where it provides a solid probabilistic basis to choose the most likely correct option.",8.0
+S179_Q4,S179,Q4,"The search algorithm in an expert system is based on the interference engine, which navigates through a knowledge base formed by ""IF-THEN"" type rules to reach a conclusion. The process begins with collecting input data from the user, which are then compared with existing conditions in the rule base. If the conditions of a rule are met, that specific rule is ""activated"", generating new facts or triggering actions that bring the system closer to its final objective.
+
+There are two main search strategies: forward chaining and backward chaining. In forward chaining (forward chaining), the algorithm starts from known facts and applies rules successively until it obtains a new result or solution. In backward chaining, the system starts from a goal or hypothesis and searches in the opposite direction for the necessary evidence and rules to support that hypothesis. Finally, the system selects the most suitable path of resolution, manages any potential conflicts between rules, and presents the user with the final recommendation together with the logical explanation of the decision.",10.0
+S179_Q5,S179,Q5,"Facial recognition acts as an advanced biometric system that transforms human facial features into a unique digital signature for authentication and monitoring. In modern applications, it replaces or complements traditional methods such as passwords or access cards, offering a rapid and contactless identification method. The process involves detecting the face in an image, extracting nodal points (such as eye distance or jaw shape) and comparing this template with an existing database.
+
+In personal device security, the technology ensures that only the owner can unlock phones or access banking applications, often using 3D sensors to prevent photo-based frauds. At an industrial and public level, facial recognition is used for secure building access control, monitoring person flows in airports to identify suspects, and automating check-in processes. In addition to efficiency, its critical role is to provide a high level of traceability, allowing surveillance systems to trigger instant alerts when an unauthorized person enters a restricted area.",8.5
+S187_Q1,S187,Q1,"A software that keeps track of changes in code (history). Essential for team collaboration, backups and reverting to previous versions (e.g. Git).",9.0
+S187_Q2,S187,Q2,"Narrow AI (ANI) is an expert in a single task (e.g. chess, Siri). General AI (AGI) could potentially solve any human intellectual problem (still theoretical).",7.5
+S187_Q3,S187,Q3,A fast classification algorithm based on probabilities (Bayes' Theorem). Decides the category (e.g. Spam/Non-Spam) assuming that the data features are independent.,6.5
+S187_Q4,S187,Q4,"The inference engine compares the known facts with a rule base (If-Then). If a rule matches, it executes the conclusion (by chaining forward or backward).",5.5
+S187_Q5,S187,Q5,"Person identity authentication by scanning facial features. Role: access control (doors, phones) and public surveillance.",5.5
+S188_Q1,S188,Q1,"A version control system (VCS) is an instrument that tracks and manages the modifications made to source code (or other files) over time. In practice, it keeps a clear history: who, what, when, and why something was changed.",7.0
+S188_Q2,S188,Q2,"The difference between narrow AI (Narrow AI) and general AI (General AI / AGI) lies in how wide the intelligence is and what type of tasks it can solve. Examples of narrow AI are voice assistants: Siri, Alexa, Google Assistant. Examples of hypothetical/ fictional general AI:
+JARVIS (Iron Man)
+HAL 9000 (2001: A Space Odyssey)",6.5
+S188_Q3,S188,Q3,"The Naive Bayes classifier is a supervised machine learning algorithm used for classification, based on Bayes' theorem and the ""naive"" assumption: features are independent of each other.",5.0
+S188_Q4,S188,Q4,"In an expert system, the search algorithm is the mechanism by which the system arrives at a conclusion based on knowledge (rules) and facts. In practice, it searches for a solution in the state space applying logical rules.",5.5
+S188_Q5,S188,Q5,"Facial recognition plays an important role in modern security applications as it allows for the identification or verification of a person's identity based on facial features, in a fast and (mostly) automated manner.",6.0
+S190_Q1,S190,Q1,"A version control system (VCS) is a software that records all the modifications made to the source code, allowing you to revert to any previous version of the project.",7.5
+S190_Q2,S190,Q2,"Named also ""Narrow AI"" or ""Weak AI"", this is the only form of AI that currently exists. It is designed to execute a single task or a limited set of tasks extremely well.
+
+Named also ""Strong AI"", this is theoretical. It represents a machine capable of understanding, learning and applying knowledge in any field, just like a human.",6.5
+S190_Q3,S190,Q3,The Naive Bayes classifier is an automatic learning algorithm (Machine Learning) based on Bayes' Theorem. It is used to classify data into specific categories based on probabilities.,5.5
+S190_Q4,S190,Q4,"Forward Chaining: Good for planning, design and prognosis (when you have a lot of data and don't know where you'll end up).
+
+Backward Chaining: Good for diagnosis and troubleshooting (when you have a suspect and want to verify the evidence).",4.0
+S190_Q5,S190,Q5,"In modern security applications, facial recognition has evolved from a simple identification method to a complex layer of biometric protection.",4.0
+S194_Q1,S194,Q1,It is a system that saves the history of code modifications to allow collaboration and recovery of old versions.,6.0
+S194_Q2,S194,Q2,"The narrow AI performs a single specific task (e.g. chess), while the general AI can learn any human task.",6.5
+S194_Q3,S194,Q3,It is a classification algorithm based on probabilities that predicts the category of an element using existing data.,3.0
+S194_Q4,S194,Q4,"It collects data, applies logical rules, and provides a final solution.",1.5
+S194_Q5,S194,Q5,It ensures security by quickly identifying authorized people using biometric identification.,3.0

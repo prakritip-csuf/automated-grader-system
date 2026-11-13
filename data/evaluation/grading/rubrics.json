@@ -1,0 +1,208 @@
+{
+  "Q1": {
+    "question": "What is a version control system and why is it essential in software development?",
+    "reference_answer": "A version control system (VCS) tracks changes to source code and other project files over time, allowing multiple developers to work concurrently without overwriting each other’s work. It records the full history of edits, supports branching and merging for safe experimentation, and enables rollbacks when mistakes occur. VCS is essential because it improves collaboration and code review, provides an auditable trail of changes, reduces integration risk, and integrates with CI/CD workflows to ship software reliably.",
+    "criteria": [
+      {
+        "id": "Q1_c1",
+        "description": "A version control system records changes to code and files over time.",
+        "points": 3.0,
+        "references": [
+          "A version control system records changes to code and files over time."
+        ]
+      },
+      {
+        "id": "Q1_c2",
+        "description": "It enables multiple developers to collaborate concurrently using branching and merging without overwriting each other's work.",
+        "points": 3.0,
+        "references": [
+          "It enables multiple developers to collaborate concurrently using branching and merging without overwriting each other's work."
+        ]
+      },
+      {
+        "id": "Q1_c3",
+        "description": "It preserves a complete, auditable history of edits and allows developers to roll back to previous versions when mistakes occur.",
+        "points": 2.0,
+        "references": [
+          "It preserves a complete, auditable history of edits and allows developers to roll back to previous versions when mistakes occur."
+        ]
+      },
+      {
+        "id": "Q1_c4",
+        "description": "It supports safe experimentation in isolated branches and integrates with CI/CD workflows to reduce integration risk and ship software reliably.",
+        "points": 2.0,
+        "references": [
+          "It supports safe experimentation in isolated branches and integrates with CI/CD workflows to reduce integration risk and ship software reliably."
+        ]
+      }
+    ]
+  },
+  "Q2": {
+    "question": "Explain the difference between narrow AI and general AI. Provide examples for each.",
+    "reference_answer": "Narrow AI (ANI) refers to systems designed to perform a specific task under bounded conditions (e.g., spam filtering, speech recognition, route planning). They excel within their domain but lack broad transfer. General AI (AGI) would show human-level, flexible competence across diverse tasks, learning and adapting without task-specific programming. AGI remains hypothetical; no system today reliably demonstrates open-ended generality. The distinction matters because engineering, safety, and evaluation differ significantly for narrow systems versus AGI.",
+    "criteria": [
+      {
+        "id": "Q2_c1",
+        "description": "Narrow AI refers to artificial intelligence systems designed to perform a specific task or a limited set of tasks within bounded conditions, without broad generalization across domains.",
+        "points": 3.0,
+        "references": [
+          "Narrow AI refers to artificial intelligence systems designed to perform a specific task or a limited set of tasks within bounded conditions, without broad generalization across domains."
+        ]
+      },
+      {
+        "id": "Q2_c2",
+        "description": "Examples of narrow AI include spam filtering, speech recognition, route planning, recommendation systems, and voice assistants.",
+        "points": 2.0,
+        "references": [
+          "Examples of narrow AI include spam filtering, speech recognition, route planning, recommendation systems, and voice assistants."
+        ]
+      },
+      {
+        "id": "Q2_c3",
+        "description": "General AI (AGI) refers to a system with human-level, flexible intelligence capable of learning, reasoning, and adapting across diverse tasks without task-specific programming.",
+        "points": 3.0,
+        "references": [
+          "General AI (AGI) refers to a system with human-level, flexible intelligence capable of learning, reasoning, and adapting across diverse tasks without task-specific programming."
+        ]
+      },
+      {
+        "id": "Q2_c4",
+        "description": "Artificial general intelligence remains hypothetical and does not currently exist, and developing it safely would require proper alignment and safety safeguards.",
+        "points": 2.0,
+        "references": [
+          "Artificial general intelligence remains hypothetical and does not currently exist, and developing it safely would require proper alignment and safety safeguards."
+        ]
+      }
+    ]
+  },
+  "Q3": {
+    "question": "What is the Naive Bayes classifier and how is it applied in decision-making?",
+    "reference_answer": "Naive Bayes is a probabilistic classifier based on Bayes’ theorem with a naive assumption that features are conditionally independent given the class. It estimates priors P(C) and likelihoods P(x_i | C), computes posterior P(C|x) ∝ P(C)∏_i P(x_i|C), and predicts the class with maximum posterior (MAP). Despite the independence simplification, it performs well for high-dimensional text such as spam detection or sentiment analysis. Limitations include correlated features and poorly calibrated probabilities without smoothing.",
+    "criteria": [
+      {
+        "id": "Q3_c1",
+        "description": "Naive Bayes is a probabilistic classifier based on Bayes' theorem that estimates prior and feature likelihood probabilities to compute the posterior probability of each class given the observed features.",
+        "points": 3.0,
+        "references": [
+          "Naive Bayes is a probabilistic classifier based on Bayes' theorem that estimates prior and feature likelihood probabilities to compute the posterior probability of each class given the observed features."
+        ]
+      },
+      {
+        "id": "Q3_c2",
+        "description": "It relies on the simplifying assumption that features are conditionally independent of one another given the class label.",
+        "points": 2.0,
+        "references": [
+          "It relies on the simplifying assumption that features are conditionally independent of one another given the class label."
+        ]
+      },
+      {
+        "id": "Q3_c3",
+        "description": "In decision-making, it classifies a new instance by selecting the class with the highest posterior probability (the maximum a posteriori decision rule).",
+        "points": 2.0,
+        "references": [
+          "In decision-making, it classifies a new instance by selecting the class with the highest posterior probability (the maximum a posteriori decision rule)."
+        ]
+      },
+      {
+        "id": "Q3_c4",
+        "description": "It is widely applied to practical classification tasks such as email spam filtering, sentiment analysis, document categorization, and medical diagnosis.",
+        "points": 2.0,
+        "references": [
+          "It is widely applied to practical classification tasks such as email spam filtering, sentiment analysis, document categorization, and medical diagnosis."
+        ]
+      },
+      {
+        "id": "Q3_c5",
+        "description": "Its main limitations include sensitivity to strongly correlated features and poorly calibrated probability estimates when smoothing is not applied.",
+        "points": 1.0,
+        "references": [
+          "Its main limitations include sensitivity to strongly correlated features and poorly calibrated probability estimates when smoothing is not applied."
+        ]
+      }
+    ]
+  },
+  "Q4": {
+    "question": "Describe the main steps of the search algorithm used in an expert system.",
+    "reference_answer": "In a rule-based expert system, search proceeds as follows: initialize the working memory with facts and identify the goal; match rule antecedents against the working memory; if multiple rules apply, perform conflict resolution (e.g., specificity, recency); fire the selected rule and execute its actions; update the working memory; test for goal achievement or termination; repeat. Implementations typically use forward chaining (data-driven) or backward chaining (goal-driven) to restrict the search.",
+    "criteria": [
+      {
+        "id": "Q4_c1",
+        "description": "An expert system search uses either data-driven forward chaining (reasoning from known facts to conclusions) or goal-driven backward chaining (working backward from a hypothesis to supporting facts).",
+        "points": 2.0,
+        "references": [
+          "An expert system search uses either data-driven forward chaining (reasoning from known facts to conclusions) or goal-driven backward chaining (working backward from a hypothesis to supporting facts)."
+        ]
+      },
+      {
+        "id": "Q4_c2",
+        "description": "The process begins by initializing working memory with the known initial facts and identifying the target goal or problem to solve.",
+        "points": 2.0,
+        "references": [
+          "The process begins by initializing working memory with the known initial facts and identifying the target goal or problem to solve."
+        ]
+      },
+      {
+        "id": "Q4_c3",
+        "description": "The inference engine matches rule conditions (antecedents) in the knowledge base against the current facts in working memory to find applicable rules.",
+        "points": 2.0,
+        "references": [
+          "The inference engine matches rule conditions (antecedents) in the knowledge base against the current facts in working memory to find applicable rules."
+        ]
+      },
+      {
+        "id": "Q4_c4",
+        "description": "When multiple rules match simultaneously, conflict resolution strategies such as rule priority, specificity, or recency are used to select which rule to apply.",
+        "points": 1.0,
+        "references": [
+          "When multiple rules match simultaneously, conflict resolution strategies such as rule priority, specificity, or recency are used to select which rule to apply."
+        ]
+      },
+      {
+        "id": "Q4_c5",
+        "description": "The selected rule is fired to execute its action, working memory is updated with newly derived facts, and the cycle repeats until the goal is achieved or no applicable rules remain.",
+        "points": 3.0,
+        "references": [
+          "The selected rule is fired to execute its action, working memory is updated with newly derived facts, and the cycle repeats until the goal is achieved or no applicable rules remain."
+        ]
+      }
+    ]
+  },
+  "Q5": {
+    "question": "What role does facial recognition play in modern security applications?",
+    "reference_answer": "Facial recognition supports security by verifying identities (authentication), identifying subjects (1-to-many), and linking events to persons in access control, border checks, and watchlist screening. Benefits include speed and traceability; risks include privacy intrusion, demographic bias, and spoofing. Responsible deployments use liveness detection, conservative thresholds with human review, data retention limits, and audit trails to meet legal and ethical requirements.",
+    "criteria": [
+      {
+        "id": "Q5_c1",
+        "description": "Facial recognition supports security through one-to-one identity verification (authentication) and one-to-many subject identification against a database.",
+        "points": 3.0,
+        "references": [
+          "Facial recognition supports security through one-to-one identity verification (authentication) and one-to-many subject identification against a database."
+        ]
+      },
+      {
+        "id": "Q5_c2",
+        "description": "It is applied in physical and digital access control, device unlocking, border checks, video surveillance, and watchlist screening.",
+        "points": 3.0,
+        "references": [
+          "It is applied in physical and digital access control, device unlocking, border checks, video surveillance, and watchlist screening."
+        ]
+      },
+      {
+        "id": "Q5_c3",
+        "description": "Secure deployments incorporate liveness detection to prevent spoofing along with conservative confidence thresholds and human-in-the-loop review.",
+        "points": 2.0,
+        "references": [
+          "Secure deployments incorporate liveness detection to prevent spoofing along with conservative confidence thresholds and human-in-the-loop review."
+        ]
+      },
+      {
+        "id": "Q5_c4",
+        "description": "Because facial recognition carries risks of privacy intrusion and demographic bias, responsible use requires data retention limits, audit trails, and legal compliance.",
+        "points": 2.0,
+        "references": [
+          "Because facial recognition carries risks of privacy intrusion and demographic bias, responsible use requires data retention limits, audit trails, and legal compliance."
+        ]
+      }
+    ]
+  }
+}

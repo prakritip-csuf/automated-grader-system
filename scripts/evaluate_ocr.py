@@ -118,7 +118,7 @@ def evaluate(
             )
 
         else:
-            directory_value = str(row["manual_line_dir"])
+            directory_value = str(row["manual_line_dr"])
 
             if not directory_value:
                 raise ValueError(f"Missing manual_line_dir for {sample_id}")
